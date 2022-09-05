@@ -2,6 +2,13 @@
 
 This project is built with love for my childhood favourite anime Cardcaptor Sakura, using this fantastic api https://github.com/JessVel/sakura-card-captor-api.
 
+## Tech used
+
+- HTML
+- CSS
+- Javascript
+- DOM
+
 ## Features
 
 1. Find your lucky Sakura Card today by pressing the "Get a Random Card" button.
