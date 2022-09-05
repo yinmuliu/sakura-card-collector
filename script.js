@@ -13,22 +13,28 @@ const cardContainer = document.getElementById("card-container");
 ////////////////////
 
 const displayAllCards = async () => {
+  // if the button shows "Hide All Card"
   if (showAllButton.innerHTML === "Hide All Cards") {
+    // remove the child in the card container
     while (cardContainer.firstChild) {
       cardContainer.removeChild(cardContainer.lastChild);
     }
+    // change the button's innerHTML back to "show all sakura card"
     showAllButton.innerHTML = "Show All Sakura Cards";
   } else {
+    // get data from API
     const res = await fetch(cardURL);
     const result = await res.json();
     const cards = result.data;
+    // Display all cards and append each one to the card container
     for (let i = 0; i < availableCards; i++) {
       let img = document.createElement("img");
       img.src = cards[i].sakuraCard;
       img.alt = cards[i].englishName;
-      img.className = "sakura-card";
+      img.className = "sakura-card animate__animated animate__zoomIn";
       cardContainer.appendChild(img);
     }
+    // change the button's innerHTML back to "hide all sakura card"
     showAllButton.innerHTML = "Hide All Cards";
   }
 };
@@ -63,7 +69,7 @@ const displayOneRandomCard = async () => {
     let img = document.createElement("img");
     img.src = card.sakuraCard;
     img.alt = card.englishName;
-    img.className = "sakura-card";
+    img.className = "sakura-card animate__animated animate__zoomIn";
     // append it to the card container
     cardContainer.appendChild(img);
     getRandomButton.innerHTML = "Hide Card";

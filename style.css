@@ -1,10 +1,11 @@
+
 * {
     box-sizing: border-box;
 }
 
 body { 
     background-image:url('./image/bg.webp'); 
-    background-repeat:no-repeat; 
+    background-repeat:repeat; 
     background-size:cover;
     height: 100vh;
     text-align: center;
@@ -88,8 +89,17 @@ button:hover {
   display: none;
 }
 
-@media (min-width: 768px) {
+.sakura-card {
+  margin: 5% 2% 0 2%;
+  border-radius: 10px;
+  animation: fade-in;
+  animation-duration: 5s;
+}
+
+@media (max-width: 768px) {
   button {
-    padding: 0 40px;
+    font-size: 16px;
+    padding: 0 10px;
+    margin: 0 10px;
   }
 }
