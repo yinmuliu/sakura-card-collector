@@ -97,7 +97,7 @@ button:hover {
 
 @media (max-width: 768px) {
   button {
-    height: fit-content;
+    height: 50px;
     font-size: 12px;
     line-height: normal;
     padding: 2px;

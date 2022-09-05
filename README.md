@@ -4,9 +4,13 @@ This project is built with love for my childhood favourite anime Cardcaptor Saku
 
 ## Features
 
-1. Generate a random sakura card by pressing the 'Get a random card' button.
-2. View sakura card information.
+1. Find your lucky Sakura Card today by pressing the "Get a Random Card" button.
+2. View all Sakura Cards by pressing the "Show All Sakura Card" button.
+3. Not in the mood for the current background? Change the background by pressing the "Change Background" button.
+4. Skeuomorphic button styling for better user interaction
+5. Mobile-friendly design for mobile/small screen users.
 
 ## Planning
 
-## Wireframing
+Flowchart working with API:  
+![flowchart](./image/planning.jpg)
