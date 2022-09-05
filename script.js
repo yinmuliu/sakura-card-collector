@@ -6,7 +6,14 @@ const cardURL = "https://protected-taiga-89091.herokuapp.com/api/card";
 const availableCards = 55;
 const getRandomButton = document.getElementById("random-card");
 const showAllButton = document.getElementById("all-cards");
+const changeBgButton = document.getElementById("change-bg");
 const cardContainer = document.getElementById("card-container");
+const backgroundImage = [
+  "./image/bg.webp",
+  "./image/sakura-bg.webp",
+  "./image/sakura-bg01.gif",
+  "./image/sakura-bg02.gif",
+];
 
 /////////////////////
 // Get and display all the cards when "Show All" button is clicked
@@ -77,6 +84,18 @@ const displayOneRandomCard = async () => {
 };
 
 getRandomButton.addEventListener("click", displayOneRandomCard);
+
+///////////////////
+// Change GIF Background
+///////////////////
+const changeBackground = () => {
+  // generate a random number
+  const num = randomInteger(0, 3);
+  // change the body style background image url based on the random number
+  document.body.style.backgroundImage = `url(${backgroundImage[num]})`;
+};
+
+changeBgButton.addEventListener("click", changeBackground);
 
 // When the card is clicked
 // Display more card information in a pop-up window
